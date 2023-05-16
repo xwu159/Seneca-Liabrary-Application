@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\OOPprof\OOP-Workshops\WS01\Part1\w1p1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="shoppingListApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -128,7 +128,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\OOPprof\OOP-Workshops\WS01\Part1\w1p1.cpp" />
     <ClCompile Include="File.cpp" />
     <ClCompile Include="ShoppingList.cpp" />
     <ClCompile Include="shoppingListApp.cpp" />
