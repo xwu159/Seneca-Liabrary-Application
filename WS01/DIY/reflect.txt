@@ -1,0 +1,15 @@
+/***********************************************************************
+// Intro. to Object Oriented Programming
+// Workshop 1 Part 2
+// Version 1.0
+// -----------------------------------------------------------
+// Name            Date            Email                  Student ID
+//Xinyang Wu     May 17th,2023   xwu159@myseneca.ca       153821228
+//I have done all the coding by myself and only copied the code that my
+  professor provided to complete my workshops and assignments.//
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+1. The right syntax to include a header file is #include "your writen headerfile name" or #include <system header file> for the system header file
+2. For workshop 1 part 1, (1)Structure definitions must be kept in the header file to be visible to all the modules using it.(2)Global variable declarations must be in the CPP files to be kept invisible to other modules
+3. For DIY part, I learn further about how to use the pointer, string termination.It is a little challenge for me to finish const char *strStr function, when return the address of first ocurance of "str2" in "str1", I forgot to add "&" before str1[i]. And the logic of the funciton is a kind of complex, especially iterates over 'str2', we need to check if the current character of str2 matches the character in str1, if yes, the loop will continue to the next character. If not, the inner loop ends, the out loop moves to the next position in str1.
+
