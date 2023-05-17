@@ -65,7 +65,8 @@ namespace sdds {
 			return str1;
 		}
 		for (i = 0; str1[i] != '\0'; i++) {
-			for (j = 0; str2[j] != '\0' && str1[i + j] != '\0' && str1[i + j] == str2[j]; j++)
+			for (j = 0; str2[j] != '\0' && str1[i + j] != '\0' && str1[i + j] == str2[j]; j++) {
+			}
 				if (str2[j] == '\0') {
 					return &str1[i];
 				}
