@@ -18,10 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cstring.cpp" />
+    <ClCompile Include="cstringTester.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cstring.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c91760ec-82b0-4f21-94fc-f8071a0c3b01}</ProjectGuid>
+    <ProjectGuid>{2df51872-fe21-46d4-b679-16bf85f941db}</ProjectGuid>
     <RootNamespace>DIY</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -126,13 +133,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\OOPprof\OOP-Workshops\WS01\DIY\cstringTester.cpp" />
-    <ClCompile Include="cstring.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cstring.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

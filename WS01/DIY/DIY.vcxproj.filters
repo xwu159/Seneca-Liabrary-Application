@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OOPprof\OOP-Workshops\WS01\DIY\cstringTester.cpp">
+    <ClCompile Include="cstring.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cstring.cpp">
+    <ClCompile Include="cstringTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
