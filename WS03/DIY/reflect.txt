@@ -1,0 +1,27 @@
+/***********************************************************************
+// Intro. to Object Oriented Programming
+// Workshop 3
+// -----------------------------------------------------------
+// Name            Date            Student ID            Email
+//Xinyang Wu    May 31st,2023      153821228         xwu159@myseneca.ca
+//I have done all the coding by myself and only copied the code that my professor
+  provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+1.For workshop 3 part 1 Lab part
+(1)void Item::setEmpty() {
+        m_price = 0.0;
+        m_itemName[0]= '\0';
+    };
+I put null in single quote at first, it is treated as character. in C++, 'null' is not a valid character. \0 in C++ has a value of zero.
+(2)    void Bill::display()const {
+        Title();
+        int i;
+        for (i = 0; i < m_itemsAdded; i++) {
+            m_items[i].display();
+        }
+        footer();
+    };
+for the for loop, I need to increment i until m_noOfItems instead of m_itemsAdded.
+(3)I learned how to allocate and deallocate dynamic memory. When ever open file or allocate memory, we need deallocate/destructor to prevent the memory leak.
+2.For DIY part, the logic is almost the same. I learned more about private and public in the class defination, if I want to access a private member function in a class level, it can not be done. Also the format of the output is important, even an align issue or missing a character can be a big different. Even for this simple workshop, it needs tons of code to fulfill it.I also know that if you follow the instruction, it is easy. But if you need design the code and think of the logic, it is much more complicated. That is the reason of the designing of the DIY part.
