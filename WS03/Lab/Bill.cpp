@@ -85,7 +85,7 @@ namespace sdds {
     };
 
     void Bill::init(const char* title, int noOfItems) {
-        if(m_title[0] = '\0' || noOfItems <= 0){
+        if((m_title[0] = '\0')|| (noOfItems <= 0)){
             setEmpty();
         }
         else {
