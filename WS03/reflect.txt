@@ -1,0 +1,16 @@
+1.For workshop 3 part 1 Lab part
+(1)void Item::setEmpty() {
+        m_price = 0.0;
+        m_itemName[0]= '\0';
+    };
+I put null in single quote at first, it is treated as character. in C++, 'null' is not a valid character. \0 in C++ has a value of zero.
+(2)    void Bill::display()const {
+        Title();
+        int i;
+        for (i = 0; i < m_itemsAdded; i++) {
+            m_items[i].display();
+        }
+        footer();
+    };
+for the for loop, I need to increment i until m_noOfItems instead of m_itemsAdded.
+(3)I learned how to allocate and deallocate dynamic memory. When ever open file or allocate memory, we need destructor to prevent the memory leak.
