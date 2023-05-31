@@ -24,8 +24,8 @@ namespace sdds{
 	void CalorieList::Title()const {
 		cout << "+----------------------------------------------------+" << endl;
 		if (isValid()) {
-			cout << "| ";
-			cout.width(50);
+			cout << "|  ";
+			cout.width(49);
 			cout << left << "Daily Calorie Consumption";
 			cout << " |" << endl;
 		}
