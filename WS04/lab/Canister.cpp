@@ -60,7 +60,9 @@ namespace sdds {
         else { m_usable = false; }
     }
 
-    Canister::~Canister() {}
+    Canister::~Canister() {
+        delete[] m_contentName;
+    }
 
     Canister& Canister::setContent(const char* contentName) {
         if (contentName == nullptr) {
