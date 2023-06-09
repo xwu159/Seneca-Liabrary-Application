@@ -71,7 +71,7 @@ namespace sdds {
 			for (i = 0; i < strLen(content) + 2; i++) {
 				cout << frame[5];
 			}
-			cout << frame[4] << endl;
+			cout << frame[4];
 		}
 		return cout;
 	};
