@@ -1,0 +1,35 @@
+/***********************************************************************
+// Intro. to Object Oriented Programming
+// Workshop 4 Part 1 Lab
+// -----------------------------------------------------------
+// Name            Date            Student ID            Email
+//Xinyang Wu    June 6th,2023       153821228         xwu159@myseneca.ca
+//I have done all the coding by myself and only copied the code that my professor
+  provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+1.For workshop 4 Lab part
+（1）for PI defination, it is better to use const double PI instead of #define double PI.It is generally recommended to use a 'const' for defining constants in C++.
+（2）for display function,  
+	if (m_contentName != nullptr) {
+            cout.width(7); 
+	    cout << " of "<< m_contentVolume << "cc";
+     At the first I put the width prior to the whole cout line, that means " of "will displayed within a field of width 7 characters, not m_contentVolumn,after analysing the output, I change the width postion just before the m_contentVolumn, then it works.
+(3)For Canister(double height, double diameter,const char* contentName = nullptr) function, when I implement it in cpp file, it generate Error: redefinition of default argument: parameter 1.In C++, default arguments can only be specified once, usually in the function declaration (header file). If I try to provide a default argument again in the function definition (CPP file), it will result in a redefinition error.To resolve this issue, I remove the default argument from the function definition in the CPP file.
+(4）I also forgot the deallocate the memory at the first which cause memory leak, after finish the destructor, it works.
+2.For DIY part
+(1)For 	void Label::readLabel() {
+		char temp[71];
+		cin.getline(temp, 71);
+		content = new char[strLen(temp) + 1];
+		strCpy(content, temp);
+	};
+    I forgot to delete[] content first, after correct it, it deallocates any previously allocated memory for content before allocating new memory, which prevents memory leaks.
+(2)When implement the destructor, first I write 
+        ~LabelMaker::LabelMaker() {
+		delete[] labels;
+	}
+The destructor should be declared without the class name. the correct format is only use~ followed by the class'name without return type.
+(3)In the default constructor Label(), I set content to nullptr. But when I try to use this Label object and call printLabel(), it will attempt to calculate the string length of content (which is a null pointer), causing undefined behavior.
+In the readLabel() method, I am deleting content and assigning a new value to it. However, in the case where readLabel() is called on a Label object created with the default constructor (which set content to nullptr), I am attempting to delete a null pointer, which is undefined behavior too.
+So I update the printLable method and readLable function, update the content!=nullptr
