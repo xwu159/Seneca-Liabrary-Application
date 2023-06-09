@@ -29,7 +29,10 @@ namespace sdds {
 	void LabelMaker::printLabels() {
 		int i = 0;
 		for (i = 0; i < noOfLabels; i++) {
-			labels[i].printLabel();
+			if (i != noOfLabels) {
+				labels[i].printLabel();
+				cout << endl;
+			}
 		}
 	}
 
