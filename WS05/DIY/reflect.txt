@@ -1,0 +1,48 @@
+/***********************************************************************
+// Intro. to Object Oriented Programming
+// Workshop 5 
+// -----------------------------------------------------------
+// Name            Date            Student ID            Email
+//Xinyang Wu    June 11th,2023      153821228         xwu159@myseneca.ca
+//I have done all the coding by myself and only copied the code that my professor
+  provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+1.For lab part, I learned how to use member operators and helper function.
+(1)The syntax for the member operators is Type ClassName::operatorOp(parameters) {}
+   Type is the return type of the operator function.
+   ClassName is the name of the class where the operator is being defined.
+   operatorOp is the operator keyword followed by the operator symbol being overloaded. For example, operator=,     
+   operator+, operator==, etc.
+   parameters are the input parameters for the operator function
+(2)The syntax for the helper function is return_type helper_function_name(parameter_list) {}. Also for the Binary helper operators in this lab, we need to use (double) to cast the Account objects to double, which means obtaining the account balance.I use the conversion operator in the Account class 
+Account::operator double() const {
+    return m_balance;
+} This allow the object of class Account to be treated as a double.
+(3)for Account& Account::operator=(int number) {
+        if (m_number==0 && number >= 10000 && number <= 99999) {
+            m_number = number;
+        }
+        else{
+            m_number = -1;
+            m_balance = 0.0;
+        }
+        return *this;
+    }
+I generate the error report as the logic is not correct, for my previous logic, if my account is not new, it will set to invalid state, but it should perform any action. So I change it to
+ Account& Account::operator=(int number) {
+        if (m_number==0 && number >= 10000 && number <= 99999) {
+            m_number = number;
+        }
+        else if(m_number == 0){
+            m_number = -1;
+            m_balance = 0.0;
+        }
+        return *this;
+    }
+So it can deal with if the account is not new condition properly.
+
+2.For DIY part(1) the first problem I met is that there is error message 'operator +=' is ambiguous, it indicates that the compiler is unable to decide witch "operator+=" to use. I can't directly add an integer and a user-defined object without specifying how this should be done.So I add a function to handle this problem int operator+=(int& left, const Mark& right) {
+		return left += int(right);
+	}
+(2)My original code is generate += k(200) always is 20, after analysing the output, we need to keep 'k''s initial value as 200,so I add a boolean m_isValid inside the Mark class to keep track of m_mark's validity.It took me a long time to fix it. After modifyting, when I create a new Mark object, m_mark is set to the passed-in value, regardless of its validity, and then m_isValid is set to whether that value is valid. When to attempt to cast a Mark object to int, if m_mark's value is invalid (i.e., m_isValid is false), it returns 0; otherwise, it returns m_mark's value. Similarly,  += operator checks the validity of m_mark, and only attempts to perform addition if m_mark's value is valid.
