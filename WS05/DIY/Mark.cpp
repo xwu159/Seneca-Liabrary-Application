@@ -44,7 +44,7 @@ namespace sdds {
 	}
 
 	Mark::operator double() const {
-		if (m_mark >= 0 && m_mark < 50)
+		if (m_isValid&&m_mark >= 0 && m_mark < 50)
 			return 0.0;
 		else if (m_mark >= 50 && m_mark < 60)
 			return 1.0;
