@@ -1,0 +1,17 @@
+/***********************************************************************
+// Intro. to Object Oriented Programming
+// Workshop 6 Part 1 Lab
+// -----------------------------------------------------------
+// Name            Date            Student ID            Email
+//Xinyang Wu    July 4th,2023      153821228         xwu159@myseneca.ca
+// Revision History
+//I have done all the coding by myself and only copied the code that my professor
+  provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+1.I learned more about ifstream and ofstream, how to use them to open ,read the file.
+2.for the loadText function,m_textLines[countLine] = line.c_str();, line is a std::string object, and m_textLines[countLine] requires a C-style string, so line.c_str() is used to perform the type conversion.
+3.The deallocation of memory, we need to validate it is not a nullptr first, then delete.
+4.For the loadText function: I add a safeguards against buffer overruns, and now allocating memory for each line individually, which is safer and more flexible.
+5.For the TextFile copy constructor and assignment operator, I use shallow copy first, but it needs to be revised to deep copy the m_textLines member to make sure each TextFile object maintain its own independent copy of data.
+6.Also for the TextFile::view function, I didn't add functionally to prompt the user to hit Enter to continue when there are more lines remaining than the page size, afterwards, I anylase the output and update it.
