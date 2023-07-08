@@ -45,13 +45,13 @@ namespace sdds {
         unsigned int run();
         unsigned int operator~();
         operator int() const;
-        operator unsigned int() const;
+        operator unsigned int();
         operator bool();
         Menu& operator<<(const char* menuTitle);
         //overload the indexing operator to run the const char* cast of the corresponding MenuItem in the array of MenuItem pointer
         char* operator[](unsigned int index) const;
     };
     // Overloading the insertion operator
-    std::ostream& operator<<(std::ostream& os, const Menu& menu);
+    std::ostream& operator<<(std::ostream& os, Menu& menu);
 }
 #endif

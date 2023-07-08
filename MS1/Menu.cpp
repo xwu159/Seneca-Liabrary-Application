@@ -104,7 +104,7 @@ namespace sdds {
         return m_noOfItems;
     }
 
-    Menu::operator unsigned int() const {
+    Menu::operator unsigned int() {
         return m_noOfItems;
     }
 
@@ -125,7 +125,7 @@ namespace sdds {
         return (index>= m_noOfItems? m_item[index %= m_noOfItems]->contentOfMenu : m_item[index]->contentOfMenu);
     }
 
-    ostream& operator<<(ostream& os, const Menu& menu) {
+    ostream& operator<<(ostream& os, Menu& menu) {
         return (menu.displayMenuTitle(os));
     }
 }

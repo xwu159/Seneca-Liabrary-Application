@@ -18,7 +18,7 @@ using namespace std;
 namespace sdds {
    bool Date::validate() {
       errCode(NO_ERROR);
-      if (m_year < MIN_YEAR || m_year > m_CUR_YEAR) {
+      if (m_year < MIN_YEAR || m_year >= m_CUR_YEAR+1) {
          errCode(YEAR_ERROR);
       }
       else if (m_mon < 1 || m_mon > 12) {
