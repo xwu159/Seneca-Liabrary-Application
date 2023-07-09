@@ -9,7 +9,7 @@
 // I have done all the coding by myself and only copied the code that my
 // professor provided to complete my workshops and assignments.
 ///////////////////////////////////////////////////////////////////
-//***********************************************************************/
+***********************************************************************/
 #ifndef SDDS_MENU_H__
 #define SDDS_MENU_H__
 #include <iostream>

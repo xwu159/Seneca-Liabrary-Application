@@ -9,7 +9,7 @@
 // I have done all the coding by myself and only copied the code that my 
 // professor provided to complete my workshops and assignments.
 ///////////////////////////////////////////////////////////////////
-//***********************************************************************/
+***********************************************************************/
 #include <iostream>
 #include "Utils.h"
 using namespace std;
@@ -28,5 +28,21 @@ namespace sdds {
             }
         }
         return value;
+    }
+    int strLen(const char* s) {
+        int length = 0;
+        while (*s != '\0') {
+            length++;
+            s++;
+        }
+        return length;
+    }
+    void strcpy(char* des, const char* src) {
+        while (*src != '\0') {
+            *des = *src;
+            src++;
+            des++;
+        }
+        *des = '\0';
     }
 }
