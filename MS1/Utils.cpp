@@ -29,7 +29,7 @@ namespace sdds {
         }
         return value;
     }
-    int strLen(const char* s) {
+    int strlen(const char* s) {
         int length = 0;
         while (*s != '\0') {
             length++;
