@@ -74,8 +74,10 @@ namespace sdds {
     }
 
     ostream& Menu::displayMenu(ostream& os) {
-        displayMenuTitle(os);
-        os << ":" << endl;
+        if (menuTitle) {
+            displayMenuTitle(os);
+            os << ":" << endl;
+        }
         for (unsigned int i = 0; i < m_noOfItems; i++) {
             os.setf(ios::right);
             os.width(2);
