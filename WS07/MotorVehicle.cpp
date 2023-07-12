@@ -10,24 +10,24 @@
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <cstring>
 //setw in iomanip library
 #include <iomanip>
 #include "MotorVehicle.h"
+#include "cstring.h"
 using namespace std;
 namespace sdds {
 
 	MotorVehicle::MotorVehicle(const char* plate, int year) {
-		strncpy(this->plate, plate, 9);
-		strcpy(address, "Factory");
+		strnCpy(this->plate, plate, 9);
+		strCpy(address, "Factory");
 		this->year = year;
 	}
 
 	void MotorVehicle::moveTo(const char* address) {
-		if (strcmp(this->address, address)) {
+		if (strCmp(this->address, address)) {
 			cout << "|" << right <<setw(8) << plate << "| |" << setw(20) << this->address
 				<< " ---> " << left << setw(20) << address << " | " << endl;
-			strncpy(this->address, address, 64);
+			strnCpy(this->address, address, 64);
 		}
 	}
 	ostream& MotorVehicle::write(ostream& os) const {
