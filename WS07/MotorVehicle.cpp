@@ -36,11 +36,11 @@ namespace sdds {
 	}
 
 	istream& MotorVehicle::read(istream& in) {
-		cout << "Built year : ";
+		cout << "Built year: ";
 		in >> year;
-		cout << "License plate : ";
+		cout << "License plate: ";
 		in >> plate;
-		cout << "Current location : ";
+		cout << "Current location: ";
 		in >> address;
 		return in;
 	}
