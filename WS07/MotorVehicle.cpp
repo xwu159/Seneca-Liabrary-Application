@@ -26,7 +26,7 @@ namespace sdds {
 	void MotorVehicle::moveTo(const char* address) {
 		if (strCmp(this->address, address)) {
 			cout << "|" << right <<setw(8) << plate << "| |" << setw(20) << this->address
-				<< " ---> " << left << setw(20) << address << " | " << endl;
+				<< " ---> " << left << setw(20) << address << "|" << endl;
 			strnCpy(this->address, address, 64);
 		}
 	}
