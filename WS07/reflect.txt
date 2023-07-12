@@ -1,0 +1,20 @@
+/***********************************************************************
+//// Intro. to Object Oriented Programming
+//// Workshop 7 Part 2 reflect.txt
+//// -----------------------------------------------------------
+//// Name            Date            Student ID            Email
+////Xinyang Wu    July 11th,2023      153821228         xwu159@myseneca.ca
+////I have done all the coding by myself and only copied the code that my professor
+//  provided to complete my workshops and assignments.
+///////////////////////////////////////////////////////////////////
+***********************************************************************/
+1.ostream& MotorVehicle::write(ostream& os) const ,istream& MotorVehicle::read(istream& in),ostream need const, istream doesn't need.The decision to use const or not depends on the intended behavior of the functions and the objects they operate on. If the write function is not expected to modify the state of the MotorVehicle object, declaring it as const provides an additional level of safety and allows it to be called on const-qualified objects. However, the read function might modify the state of the MotorVehicle object, so it is not declared as const.
+
+2."setw" function defined in the <iomanip> header, it provides various manipulators for streamn formatting.
+
+3.The Truck class is derived from the MotorVehicle class. This allows Truck to use all the public and protected members of the MotorVehicle class. By reusing these members, we reduce the amount of code we have to write and make our program more organized.
+
+4.The use of base class constructors in derived classes: In C++, a derived class does not inherit the constructors of its base class. However, it can call them in its own constructors to initialize the base part of its objects. This is what is done in the Truck constructor with MotorVehicle(plate, year).
+
+5.Importance of virtual destructors. If a class has virtual functions, it should also have a virtual destructor. This ensures that when an object of a derived class is destroyed through a pointer of base class type, the correct destructor is called.
+
