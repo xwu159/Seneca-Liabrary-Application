@@ -13,6 +13,7 @@
 #include "CalorieList.h"
 using namespace std;
 namespace sdds{
+	// Function to calculate total calories in the food list
 	int CalorieList::totalCalories()const {
 		int i,totalCalories = 0;
 		for (i = 0; isValid() && i < m_noOfItems; i++) {
