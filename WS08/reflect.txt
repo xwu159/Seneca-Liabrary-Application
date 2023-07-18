@@ -12,3 +12,4 @@
 The first argument std::numeric_limits<std::streamsize>::max() provides the maximum number of characters to ignore, ensuring that it ignores up to the maximum limit.The second argument '\n' specifies the delimiter character, so the ignore function stops skipping characters once it encounters a newline character.
 4.One of the notable aspects of the code is the proper use of namespaces (sdds) to encapsulate the classes and prevent naming conflicts. This helps organize the code and promotes code reusability.
 5.overloaded << and >> operators for the Shape class allows shapes to be printed to and read from streams easily. This enhances the usability and flexibility of the code.
+6. There is a warning in Line.cpp, regarding initialization order, I reorder the member variable initialization in the member initialization list to match the order of declaration in the class. 

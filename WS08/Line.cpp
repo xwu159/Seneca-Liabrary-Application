@@ -11,7 +11,7 @@
 #include <limits>
 #include "Line.h"
 namespace sdds {
-	Line::Line() :m_length(0), LblShape() {};
+	Line::Line() :LblShape(),m_length(0){};
 
 	Line::Line(const char* label, int length) :LblShape(label), m_length(length) {};
 
