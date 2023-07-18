@@ -1,0 +1,14 @@
+/***********************************************************************
+//// Intro. to Object Oriented Programming
+//// Workshop 8 
+//// -----------------------------------------------------------
+//// Name            Date            Student ID            Email
+////Xinyang Wu    July 18th,2023      153821228         xwu159@myseneca.ca
+***********************************************************************/
+1.Create a virtual empty destructor for the shape interface.
+  virtual ~Shape() {}， {}indicate it is an default empty destructor.
+2.the right syntax of calling the getSpecs function of the base class, LblShape::getSpecs(is);
+3.The is.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); is used to ignore the remaining characters in the input stream is up to and including the newline character ('\n').std::numeric_limits<std::streamsize>::max() returns the maximum value that can be represented by the std::streamsize type. It provides a way to specify a large number to ignore a maximum number of characters in the stream.is.ignore() is a member function of the input stream (std::istream) that skips over a specified number of characters.
+The first argument std::numeric_limits<std::streamsize>::max() provides the maximum number of characters to ignore, ensuring that it ignores up to the maximum limit.The second argument '\n' specifies the delimiter character, so the ignore function stops skipping characters once it encounters a newline character.
+4.One of the notable aspects of the code is the proper use of namespaces (sdds) to encapsulate the classes and prevent naming conflicts. This helps organize the code and promotes code reusability.
+5.overloaded << and >> operators for the Shape class allows shapes to be printed to and read from streams easily. This enhances the usability and flexibility of the code.
