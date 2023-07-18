@@ -9,6 +9,8 @@
 ///////////////////////////////////////////////////////////////////
 ***********************************************************************/
 #include <iomanip>
+#include <limits>
+#include <cstring>
 #include "Rectangle.h"
 namespace sdds {
 	Rectangle::Rectangle() :m_width(0), m_height(0) {}

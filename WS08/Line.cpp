@@ -8,6 +8,7 @@
 //  provided to complete my workshops and assignments.
 ///////////////////////////////////////////////////////////////////
 ***********************************************************************/
+#include <limits>
 #include "Line.h"
 namespace sdds {
 	Line::Line() :m_length(0), LblShape() {};
