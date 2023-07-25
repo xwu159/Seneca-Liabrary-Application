@@ -125,6 +125,7 @@ namespace sdds {
 				istr >> tempDate;
 		}else {
 			istr >> tempLibRef;
+			// ignores the next character in the input stream
 			istr.ignore();
 			istr.getline(tempShelfId, SDDS_SHELF_ID_LEN + 1, '\t');
 			istr.getline(tempTitle, SDDS_TITLE_WIDTH + 1, '\t');
