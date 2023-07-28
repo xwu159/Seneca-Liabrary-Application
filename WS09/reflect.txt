@@ -1,0 +1,24 @@
+/***********************************************************************
+//// Intro. to Object Oriented Programming
+//// Workshop 9 Part 2 reflection
+//// -----------------------------------------------------------
+//// Name            Date            Student ID            Email
+////Xinyang Wu    July 27th,2023     153821228         xwu159@myseneca.ca
+////I have done all the coding by myself and only copied the code that my professor
+//  provided to complete my workshops and assignments.
+///////////////////////////////////////////////////////////////////
+***********************************************************************/
+
+1.Memory Management Mistakes:In Text.cpp, new dynamic memory is allocated to store the content of the file, and this memory needs to be properly deallocated using delete[] in the destructor to avoid memory leaks. Failing to deallocate memory can lead to memory consumption issues and potential crashes in larger applications.
+
+2. Uninitialized Pointers: In both Text.cpp and HtmlText.cpp, I am using pointers (e.g., m_filename, m_content, and m_title) to manage dynamic memory.I forget to initialize these pointers properly, which leads to undefined behavior or crashes when accessing or deleting them.
+
+3.Null Pointer Dereference: Another common error is not checking for null pointers before accessing them. If the file doesn't exist or the memory allocation fails, the pointers might be null, and accessing them can lead to segmentation faults.
+
+4.Incorrect String Handling: Handling strings correctly is crucial. I overlook string termination (null-termination) while working with C-style strings (char arrays). Forgetting to add the null-terminator can result in unexpected behavior and incorrect string processing.
+
+5.Logical Errors in Overrides: In HtmlText.cpp, overriding the write() function requires careful consideration of the given guidelines. For example, for my space instance, I made a mistake for the logic, I use the wrong logic in if and else condition. When I analyse the output, I fixed it.
+
+6.Incomplete Implementation of Base Class Functions: In HtmlText.cpp, since HtmlText is derived from Text, it is crucial to ensure that all the virtual functions of the base class are correctly implemented in the derived class. Failing to do so can result in unexpected behavior when using polymorphism.
+
+7. Lack of Error Handling: Error handling is essential when dealing with file operations and memory allocation. So I consider adding proper error handling code to handle potential failures and provide informative error messages.
