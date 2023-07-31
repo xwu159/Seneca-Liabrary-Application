@@ -112,7 +112,6 @@ namespace sdds {
         is >> m_day;
         if (!is) {
             errCode(CIN_FAILED);
-            is.clear();
         }
         else {
             validate();
@@ -126,8 +125,8 @@ namespace sdds {
         }
         else {
             os << m_year << "/"
-                << setfill('0') << setw(2) << m_mon << '/'
-                << setfill('0') << setw(2) << m_day;
+                << setfill('0') << setw(2) << right << m_mon << '/'
+                << setfill('0') << setw(2) << right << m_day;
             //reset padding
             os << setfill(' ');
         }
