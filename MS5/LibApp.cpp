@@ -241,7 +241,7 @@ namespace sdds {
         std::cout << std::endl;
     }
 
-    LibApp::LibApp(const char* fileName):m_changed(false),m_NOLP(0), m_mainMenu("Seneca Library Application"), m_exitMenu("Changes have been made to the data, what would you like to do?"), m_publicationType("Choose the type of publication:") {
+    LibApp::LibApp(const char* fileName):m_NOLP(0), m_changed(false), m_mainMenu("Seneca Library Application"), m_publicationType("Choose the type of publication:"),m_exitMenu("Changes have been made to the data, what would you like to do?") {
         if (fileName) {
             strcpy(m_fileName, fileName);
         }
