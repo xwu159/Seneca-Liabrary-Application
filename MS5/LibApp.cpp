@@ -158,7 +158,7 @@ namespace sdds {
     void LibApp::newPublication() {
         bool ret = false;
         if (m_NOLP == SDDS_LIBRARY_CAPACITY) {
-            std::cout << "Library is at its maximum capacity!";
+            std::cout << "Library is at its maximum capacity!" << std::endl;;
             ret = true;
         }
         if(!ret) {
