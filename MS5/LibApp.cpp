@@ -161,51 +161,48 @@ namespace sdds {
             std::cout << "Library is at its maximum capacity!";
             ret = true;
         }
-        else {
-            std::cout << "Adding new publication to library" << std::endl;
-            if (confirm("Add this publication to library?")) {
-                m_changed = true;
-                std::cout << "Publication added" << std::endl;
-                int pubType = m_publicationType.run();
+        if(!ret) {
+            std::cout << "Adding new publication to the library" << std::endl;
+            m_changed = true;
+            std::cout << "Publication added" << std::endl;
+            int pubType = m_publicationType.run();
+            cin.ignore(1000, '\n');
+            Publication* p = nullptr;
+            if (pubType == 0) {
+                std::cout << "Aborted!" << std::endl;
+                ret = true;
+                }
+            else if (pubType == 1) {
+                p = new Book;
+                cin >> *p;
+                }
+            else if (pubType == 2) {
+                p = new Publication;
+                cin >> *p;
+                }
+
+            if (cin.fail()){
                 cin.ignore(1000, '\n');
-                Publication* p = nullptr;
-                if (pubType == 0) {
-                    std::cout << "Aborted!" << std::endl;
-                    ret = true;
+                cin.clear();
+                std::cout << "Aborted!" << std::endl;
+                exit(0);
                 }
-                else if (pubType == 1) {
-                    p = new Book;
-                    cin >> *p;
-                }
-                else if (pubType == 2) {
-                    p = new Publication;
-                    cin >> *p;
-                }
-
-                if (cin.fail())
-                {
-                    cin.ignore(1000, '\n');
-                    cin.clear();
-                    std::cout << "Aborted!" << std::endl;
-                    exit(0);
-                }
-                else {
-                    if (!ret && confirm("Add this publication to the library?")) {
-                        if (!*p) {
-                            std::cout << "Failed to add publication!" << std::endl;
-                            delete p;
+            else {
+                if (!ret && confirm("Add this publication to the library?")) {
+                    if (!*p) {
+                        std::cout << "Failed to add publication!" << std::endl;
+                        delete p;
                         }
 
-                        else {
-                            m_LLRN++;
-                            p->setRef(m_LLRN);
+                    else {
+                        m_LLRN++;
+                        p->setRef(m_LLRN);
 
-                            m_PPA[m_NOLP] = p;
+                        m_PPA[m_NOLP] = p;
 
-                            m_NOLP++;
-                            m_changed = true;
-                            std::cout << "Publication added" << std::endl;
-                        }
+                        m_NOLP++;
+                        m_changed = true;
+                        std::cout << "Publication added" << std::endl;
                     }
                 }
             }
