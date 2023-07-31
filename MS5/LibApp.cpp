@@ -164,7 +164,6 @@ namespace sdds {
         if(!ret) {
             std::cout << "Adding new publication to the library" << std::endl;
             m_changed = true;
-            std::cout << "Publication added" << std::endl;
             int pubType = m_publicationType.run();
             cin.ignore(1000, '\n');
             Publication* p = nullptr;
