@@ -6,15 +6,16 @@
 #include "Publication.h"
 namespace sdds {
    class LibApp {
+       bool m_changed;
+       Menu m_mainMenu;
+       Menu m_exitMenu;
+
        char m_fileName[257];
        Publication* m_PPA[SDDS_LIBRARY_CAPACITY + 1];
        int m_NOLP;
        int m_LLRN;
-       Menu m_publicationType;
 
-       bool m_changed;
-       Menu m_mainMenu;
-       Menu m_exitMenu;
+       Menu m_publicationType;
 
        bool confirm(const char* message);
        void load();
