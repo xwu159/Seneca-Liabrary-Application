@@ -97,8 +97,8 @@ namespace sdds {
 		}
 		else {
 			os << type() ;
-			os << '\t' << m_libRef << '\t' << m_shelfId << '\t' << setw(30) << m_title << '\t';
-			os << m_membership;
+			os << '\t' << m_libRef << '\t' << m_shelfId << '\t' << left << m_title << '\t';
+			os << m_membership<<right;
 			os << '\t' << m_date;
 		}
 

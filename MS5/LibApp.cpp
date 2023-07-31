@@ -241,10 +241,12 @@ namespace sdds {
         std::cout << std::endl;
     }
 
-    LibApp::LibApp(const char* fileName):m_NOLP(0), m_changed(false), m_mainMenu("Seneca Library Application"), m_publicationType("Choose the type of publication:"),m_exitMenu("Changes have been made to the data, what would you like to do?") {
+    LibApp::LibApp(const char* fileName):m_mainMenu("Seneca Library Application"), m_exitMenu("Changes have been made to the data, what would you like to do?"), m_publicationType("Choose the type of publication:") {
         if (fileName) {
             strcpy(m_fileName, fileName);
         }
+        m_changed = false;
+        m_NOLP = 0;
         m_mainMenu << "Add New Publication" << "Remove Publication" << "Checkout publication from library" << "Return publication to library";
         m_exitMenu << "Save changes and exit" << "Cancel and go back to the main menu";
         m_publicationType << "Book" << "Publication";
