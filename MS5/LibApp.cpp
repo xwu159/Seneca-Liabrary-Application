@@ -210,7 +210,7 @@ namespace sdds {
     }
 
  void LibApp::removePublication() {
-        std::cout << "Removing publication from library" << std::endl;
+        std::cout << "Removing publication from the library" << std::endl;
         int libRef = search(1);
         if (libRef) {
             if (confirm("Remove this publication from the library?")) {
