@@ -1,0 +1,43 @@
+/***********************************************************************
+// Intro. to Object Oriented Programming
+// Workshop 10
+// Version 1.0
+// Description
+//
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Email
+//Xinyang Wu	August 4th,2023	  xwu159@myseneca.ca
+//I have done all the coding by myself and only copied the code that my professor
+//provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+// ----------------------------------------------------------------------------
+// search function template
+//
+// Searches for elements matching the given key in an array and adds them to a Collection.
+//
+// Template Parameters:
+//   T: Type of elements in the Collection and the array.
+//   K: Type of the key to search for.
+//
+// Parameters:
+//   col: A reference to a Collection of templated objects.
+//   arr: An array of templated objects.
+//   arraySize: Number of elements in the array.
+//   key: A key templated value to search for in the array.
+//
+// Returns:
+//   Returns true if at least one match is found and added to the collection, false otherwise.
+//
+// Requirements:
+// - The type T must support the equality operator (==) for comparisons.
+// - The Collection class must support the add() function for adding elements.
+//
+// ----------------------------------------------------------------------------
+
+Workshop 10 uses very important programming techniques that can simplify and enhance our code. The concepts of template functions and dynamic collections in C++ might sound complex, but they are actually tools that make our code more adaptable and reusable in practical ways.
+
+During this workshop, we focused on two essential functions: search and listArrayElements. These functions might seem like ordinary tools, but their cleverly use of templates makes them incredibly versatile. The search function is like a smart detective that can look for specific items in an array and neatly organize them. It's like having a personal assistant that can find what you need in a cluttered room. On the other hand, the listArrayElements function is like a skilled organizer that arranges your belongings neatly on shelves with clear labels. Both functions use templates to understand different types of data.
+
+In summary, Workshop 10 deepened my understanding of template functions and their applications in creating adaptable and efficient code. I learned how to design and implement generic functions that can handle various data types and sizes, contributing to code modularity and reusability. The concepts of dynamic collections and template functions have practical implications in real-world programming scenarios, enabling me to write more flexible and robust code. This workshop has equipped me with valuable skills that I can apply to future projects, enhancing my ability to develop scalable and maintainable software solutions.
